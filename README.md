@@ -1,4 +1,4 @@
-#Ambiente
+Ambiente
 
 Wampserver
 	Mysql	5.7.36
