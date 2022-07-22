@@ -15,45 +15,100 @@
 
 
 
+
+
+
+
 <!DOCTYPE html>
+
+
 <html>
 <head>
-	<title>Index</title>
-	<link rel="stylesheet" type="text/css" href="css/adminindex">
-  <style>
-            #items { 
-                width: 700px;
-            }
-            .item {
-                float: left;
-                width: 1065px;
-            }
-        </style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("bci.png");
+
+  /* Full height */
+  height: 25%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
 </head>
 <body>
-	<header>
-		<div class="p1">School Management 
-    <input type="button" name="logout" id="logout" value="Log Out" onclick="location.href='logout.php'">
-		</div>
-	</header>
-	<div class="left">
-		<div class="cd">Menu</div>
-		<div id="menu">
-			<ul class="box">
-				<li class="user"><a href="user.php" class="xx">Users</a></li>
-				<li class="estudantes"><a href="adminestudantes.php" class="xx">Estudantes</a></li>
-				<li class="professor"><a href="professor.php" class="xx">Professores</a></li>			
-				<li class="alldis"><a href="disciplina.php" class="xx">Disciplinas</a></li>
-				<li class="addc"><a href="addc.php" class="xx">Adicionar Disciplina</a></li>
-			</ul>
-		</div>
-	</div>
-	<div class="item">
 
+<div class="bg"></div>
+
+</body>
+</html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 16px 25px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+</div>
+
+<div style="padding-left:16px">
+  <h2>Top Navigation Example</h2>
+  <p>Some content..</p>
+</div>
+
+</body>
+</html>
 
 
 
 <?php
+
+
+
 
 /*
  * IMPORTANT NOTE: This generated file contains only a subset of huge amount
@@ -76,17 +131,16 @@ $opts['hn'] = 'localhost';
 $opts['pt'] = '3306';
 $opts['un'] = 'root';
 $opts['pw'] = 'root';
-$opts['db'] = 'curse';
-$opts['tb'] = 'professor';
+$opts['db'] = 'phpteste';
+$opts['tb'] = 'teste';
 
 
 // Name of field which is the unique key
-$opts['key'] = 'nprof';
+$opts['key'] = 'chave';
 
 // Type of key field (int/real/string/date etc.)
-$opts['key_type'] = 'varchar';
 // Sorting field(s)
-$opts['sort_field'] = array('nprof');
+$opts['sort_field'] = array('chave');
 
 // Number of records to display on the screen
 // Value of -1 lists all records in a table
@@ -171,20 +225,10 @@ appear in generated list. Here are some most used field options documented.
   This is useful for giving more meaning to column values. Multiple
   descriptions fields are also possible. Check documentation for this.
 */
-
-
-
-$opts['fdd']['username'] = array(
-  'name'     => 'Username',
+$opts['fdd']['chave'] = array(
+  'name'     => 'Chave',
   'select'   => 'T',
-  'maxlen'   => 20,
-  'default'  => '0',
-  'sort'     => true
-);
-$opts['fdd']['nprof'] = array(
-  'name'     => 'Nprof',
-  'select'   => 'T',
-  'maxlen'   => 20,
+  'maxlen'   => 10,
   'sort'     => true
 );
 $opts['fdd']['nome'] = array(
@@ -199,38 +243,8 @@ $opts['fdd']['apelido'] = array(
   'maxlen'   => 20,
   'sort'     => true
 );
-$opts['fdd']['sexo'] = array(
-  'name'     => 'Sexo',
-  'select'   => 'T',
-  'maxlen'   => 20,
-  'sort'     => true
-);
-$opts['fdd']['idade'] = array(
-  'name'     => 'Idade',
-  'select'   => 'T',
-  'maxlen'   => 3,
-  'sort'     => true
-);
-$opts['fdd']['tel'] = array(
-  'name'     => 'Tel',
-  'select'   => 'T',
-  'maxlen'   => 20,
-  'sort'     => true
-);
-$opts['fdd']['curso'] = array(
-  'name'     => 'Curso',
-  'select'   => 'T',
-  'maxlen'   => 20,
-  'sort'     => true
-);
-$opts['fdd']['dnome'] = array(
-  'name'     => 'Dnome',
-  'select'   => 'T',
-  'maxlen'   => 30,
-  'sort'     => true
-);
-$opts['fdd']['ndis'] = array(
-  'name'     => 'Ndis',
+$opts['fdd']['morada'] = array(
+  'name'     => 'Morada',
   'select'   => 'T',
   'maxlen'   => 20,
   'sort'     => true

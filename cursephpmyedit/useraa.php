@@ -11,48 +11,6 @@
 	td.pme-message { text-align: center; }
 	td.pme-stats   { text-align: right;  }
 </style>
-
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Index</title>
-	<link rel="stylesheet" type="text/css" href="css/adminindex">
-  <style>
-            #items { 
-                width: 700px;
-            }
-            .item {
-                float: left;
-                width: 1065px;
-            }
-        </style>
-</head>
-<body>
-	<header>
-		<div class="p1">School Management 
-    <input type="button" name="logout" id="logout" value="Log Out" onclick="location.href='logout.php'">
-		</div>
-	</header>
-	<div class="left">
-		<div class="cd">Menu</div>
-		<div id="menu">
-			<ul class="box">
-				<li class="user"><a href="user.php" class="xx">Users</a></li>
-				<li class="estudantes"><a href="adminestudantes.php" class="xx">Estudantes</a></li>
-				<li class="professor"><a href="professor.php" class="xx">Professores</a></li>			
-				<li class="alldis"><a href="disciplina.php" class="xx">Disciplinas</a></li>
-				<li class="addc"><a href="addc.php" class="xx">Adicionar Disciplina</a></li>
-			</ul>
-		</div>
-	</div>
-	<div class="item">
-
-
-
-
 <?php
 
 /*
@@ -77,16 +35,16 @@ $opts['pt'] = '3306';
 $opts['un'] = 'root';
 $opts['pw'] = 'root';
 $opts['db'] = 'curse';
-$opts['tb'] = 'professor';
+$opts['tb'] = 'user';
 
 
 // Name of field which is the unique key
-$opts['key'] = 'nprof';
+$opts['key'] = 'username';
 
 // Type of key field (int/real/string/date etc.)
 $opts['key_type'] = 'varchar';
 // Sorting field(s)
-$opts['sort_field'] = array('nprof');
+$opts['sort_field'] = array('username');
 
 // Number of records to display on the screen
 // Value of -1 lists all records in a table
@@ -171,9 +129,6 @@ appear in generated list. Here are some most used field options documented.
   This is useful for giving more meaning to column values. Multiple
   descriptions fields are also possible. Check documentation for this.
 */
-
-
-
 $opts['fdd']['username'] = array(
   'name'     => 'Username',
   'select'   => 'T',
@@ -181,56 +136,14 @@ $opts['fdd']['username'] = array(
   'default'  => '0',
   'sort'     => true
 );
-$opts['fdd']['nprof'] = array(
-  'name'     => 'Nprof',
+$opts['fdd']['password'] = array(
+  'name'     => 'Password',
   'select'   => 'T',
   'maxlen'   => 20,
   'sort'     => true
 );
-$opts['fdd']['nome'] = array(
-  'name'     => 'Nome',
-  'select'   => 'T',
-  'maxlen'   => 20,
-  'sort'     => true
-);
-$opts['fdd']['apelido'] = array(
-  'name'     => 'Apelido',
-  'select'   => 'T',
-  'maxlen'   => 20,
-  'sort'     => true
-);
-$opts['fdd']['sexo'] = array(
-  'name'     => 'Sexo',
-  'select'   => 'T',
-  'maxlen'   => 20,
-  'sort'     => true
-);
-$opts['fdd']['idade'] = array(
-  'name'     => 'Idade',
-  'select'   => 'T',
-  'maxlen'   => 3,
-  'sort'     => true
-);
-$opts['fdd']['tel'] = array(
-  'name'     => 'Tel',
-  'select'   => 'T',
-  'maxlen'   => 20,
-  'sort'     => true
-);
-$opts['fdd']['curso'] = array(
-  'name'     => 'Curso',
-  'select'   => 'T',
-  'maxlen'   => 20,
-  'sort'     => true
-);
-$opts['fdd']['dnome'] = array(
-  'name'     => 'Dnome',
-  'select'   => 'T',
-  'maxlen'   => 30,
-  'sort'     => true
-);
-$opts['fdd']['ndis'] = array(
-  'name'     => 'Ndis',
+$opts['fdd']['role'] = array(
+  'name'     => 'Role',
   'select'   => 'T',
   'maxlen'   => 20,
   'sort'     => true

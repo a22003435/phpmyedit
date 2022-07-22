@@ -42,15 +42,13 @@
 			echo "<table align='center' width='400px' border='2px' cellpadding='0' cellspacing='0'>";
 			while($row=mysqli_fetch_array($result)){
 		
-
-					echo "<tr><th>Numero Professor</th><th>".$row[1]."</th></tr>";
 					echo "<tr><th>Username</th><th>".$row[0]."</th></tr>";
-					echo "<tr><th>Nome</th><th>".$row[2]."</th></tr>";
-					echo "<tr><th>Apelido</th><th>".$row[3]."</th></tr>";
+					echo "<tr><th>Numero Professor</th><th>".$row[1]."</th></tr>";
+					echo "<tr><th>Nome</th><th>".$row[2]." ".$row[3]."</th></tr>";
 					echo "<tr><th>Sexo</th><th>".$row[4]."</th></tr>";
 					echo "<tr><th>Idade</th><th>".$row[5]."</th></tr>";
 					echo "<tr><th>Telefone</th><th>".$row[6]."</th></tr>";
-					echo "<tr><th>Disciplina</th><th>".$row[7]."</th></tr>";		
+					echo "<tr><th>Curso</th><th>".$row[7]."</th></tr>";		
 			}
 			echo "</table>";
 			mysqli_close($link);
