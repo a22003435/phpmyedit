@@ -29,7 +29,7 @@ quando ambiente esta instalado, abrir no browswer main page http://localhost/cur
 
     
  ## link youtube
- https://youtu.be/ge0EBT3Bm9c
+https://www.youtube.com/watch?v=1b3-ckE3fXs
     
 
     
