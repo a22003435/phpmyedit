@@ -217,6 +217,10 @@ $opts['fdd']['ncurso'] = array(
   'maxlen'   => 20,
   'sort'     => true
 );
+$opts['fdd']['ncurso']['values']['filters']  = 'Gestao e Programacao';
+$opts['fdd']['naluno']['values']['filters']  = 'id IN (172022,172088)';
+$opts['fdd']['ncurso']['values']['orderby']  = 'Gestao e Programacao';
+
 
 // Now important call to phpMyEdit
 require_once 'phpMyEdit.class.php';

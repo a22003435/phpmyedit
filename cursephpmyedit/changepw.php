@@ -15,7 +15,7 @@
 		<div id="menu">
 			<ul class="box">
 				<li class="estudanteinfo"><a href="estudanteindex.php" class="xx">Estudante Info</a></li>
-				<li class="estudantecurso"><a href="estudantecurso.php" class="xx">Escolher Disciplina</a></li>
+				<li class="estudantecurso"><a href="estudantecurso.php" class="xx">Inscrever Disciplina</a></li>
 				<li class="consultaAll"><a href="searchcourse.php" class="xx">Pesquisa Disciplina</a></li>
 				<li class="anular"><a href="anulardis.php" class="xx">Anular Disciplina</a></li>
 				<li class="alterar">

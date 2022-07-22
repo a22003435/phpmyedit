@@ -15,7 +15,7 @@
 		<div id="menu">
 			<ul class="box">
 				<li class="estudanteinfo"><a href="estudanteindex.php" class="xx">Estudante Info</a></li>
-				<li class="estudantecurso"><a href="estudantecurso.php" class="xx">Escolher Disciplina</a></li>
+				<li class="estudantecurso"><a href="estudantecurso.php" class="xx">Inscrever Disciplina</a></li>
 				<li class="consultaAll"><a href="searchcourse.php" class="xx">Pesquisa Disciplina</a></li>
 				<li class="anular"><a href="anulardis.php" class="xx">Anular Disciplina</a></li>
 				<li class="alterar">
@@ -42,14 +42,14 @@
 			$result=mysqli_query($link,"select * from estudante where username='$username'");
 			echo "<h2 align='center'>Estudante Info</h2>";
 			echo "<table align='center' width='450px' border='2px' cellpadding='0' cellspacing='0'>";
-			while($row=mysqli_fetch_array($result)){					
-					echo "<tr><th>Numero de Aluno</th><th>".$row[1]."</th></tr>";
-					echo "<tr><th>Username</th><th>".$row[0]."</th></tr>";
-					echo "<tr><th>Nome</th><th>".$row[2]."</th></tr>";
-					echo "<tr><th>Apelido</th><th>".$row[3]."</th></tr>";
+			while($row=mysqli_fetch_array($result)){	
+					echo "<tr><th>Username</th><th>".$row[0]."</th></tr>";					
+					echo "<tr><th>Numero de Aluno</th><th>".$row[1]."</th></tr>";					
+					echo "<tr><th>Nome</th><th>".$row[2]." ".$row[3]."</th></tr>";
 					echo "<tr><th>Sexo</th><th>".$row[4]."</th></tr>";
-					echo "<tr><th>Telefone</th><th>".$row[5]."</th></tr>";
-					echo "<tr><th>Curso</th><th>".$row[6]."</th></tr>";		
+					echo "<tr><th>Idade</th><th>".$row[5]."</th></tr>";
+					echo "<tr><th>Telemovel</th><th>".$row[6]."</th></tr>";
+					echo "<tr><th>Curso</th><th>".$row[7]."</th></tr>";			
 			}                                                              
 			echo "</table>";
 

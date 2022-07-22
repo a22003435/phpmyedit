@@ -15,7 +15,7 @@
 		<div id="menu">
 			<ul class="box">
 				<li class="estudanteinfo"><a href="estudanteindex.php" class="xx">Estudante Info</a></li>
-				<li class="estudantecurso"><a href="estudantecurso.php" class="xx">Escolher Disciplina</a></li>
+				<li class="estudantecurso"><a href="estudantecurso.php" class="xx">Inscrever Disciplina</a></li>
 				<li class="consultaAll"><a href="searchcourse.php" class="xx">Pesquisa Disciplina</a></li>
 				<li class="anular"><a href="anulardis.php" class="xx">Anular Disciplina</a></li>
 				<li class="alterar">
@@ -40,10 +40,10 @@
 			if (!$link){
     			echo"<script>alert('Falha na conexão do base de dados!')</script>";
 			}
-			$result1=mysqli_query($link,"select disciplina.ndis, disciplina.dnome, disciplina.curso, professor.nome from disciplina inner join professor on disciplina.ndis=professor.ndis inner join estudante where estudante.username=$username and disciplina.curso=estudante.ncurso");
+			$result1=mysqli_query($link,"select disciplina.ndis, disciplina.dnome, disciplina.curso, professor.nome, professor.apelido from disciplina inner join professor on disciplina.ndis=professor.ndis inner join estudante where estudante.username=$username and disciplina.curso=estudante.ncurso");
 			echo "<h2 align='center'>Lista de Disciplinas</h2>";	
 			echo "<table align='center' width='450px' border='2px' cellpadding='0' cellspacing='0'>";
-			echo "<tr><th>Numero de Disciplina</th><th>Nome de Disciplina</th><th>Professor de Disciplina</th><th>Curso pertence</th></tr>";
+			echo "<tr><th>Numero de Disciplina</th><th>Nome de Disciplina</th><th>Curso</th><th>Docente</th></tr>";
 			while($row=mysqli_fetch_array($result1)){
 				echo "<tr>";
 				for($i=0;$i<4;$i++)
